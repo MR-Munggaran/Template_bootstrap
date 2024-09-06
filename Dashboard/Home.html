@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+      <div class="container-fluid">
+        <button class="btn btn-danger" id="sidebarToggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dashboard</a>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar bg-light border-end" id="sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Pelaporan Barang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pelaporan Keuangan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Manage User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">History Log</a>
+        </li>
+        <li class="nav-item mt-auto">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content mt-5" id="content">
+      <h1>Welcome to the Dashboard</h1>
+      <p>Here you can manage and view your data.</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("content");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        content.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
